@@ -36,7 +36,7 @@
 #                     Logs directory must exists, or log file creation will be disabled.
 #        Default:     "" - (Log files will be stored in the current path)
 
-LogsDir = ""
+LogsDir = "/home/server/wow/auth/logs"
 
 #
 #    MaxPingTime
@@ -125,7 +125,7 @@ SQLDriverQueryLogging = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-LogTimestamp = 0
+LogTimestamp = 1
 
 #
 #    LogFileLevel
@@ -135,7 +135,7 @@ LogTimestamp = 0
 #                     2 - (Detail)
 #                     3 - (Full/Debug)
 
-LogFileLevel = 0
+LogFileLevel = 1
 
 #
 #    LogColors
@@ -158,7 +158,7 @@ LogFileLevel = 0
 #        Example:     "13 11 9 5" - (Enabled)
 #        Default:     ""          - (Disabled)
 
-LogColors = ""
+LogColors = "10 11 9 5"
 
 #
 #    EnableLogDB
@@ -243,7 +243,7 @@ WrongPass.BanType = 0
 #                                                                           Unix/Linux)
 #        Default:     "127.0.0.1;3306;trinity;trinity;auth"
 
-LoginDatabaseInfo = "127.0.0.1;3306;trinity;trinity;auth"
+LoginDatabaseInfo = "127.0.0.1;3306;root;root;auth"
 
 #
 #    LoginDatabase.WorkerThreads
