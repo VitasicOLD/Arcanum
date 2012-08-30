@@ -15,6 +15,7 @@ set(scripts_STAT_SRCS
   Custom/cs_vip.cpp
   Custom/gm_monitoring.cpp
   Custom/boss_kill_history.cpp
+  Custom/chat_censure.cpp
 )
 
 message("  -> Prepared: Custom")

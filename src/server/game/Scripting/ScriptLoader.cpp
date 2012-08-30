@@ -18,17 +18,20 @@
 #include "ScriptLoader.h"
 #include "AnticheatMgr.h"
 
+//custom scripts
+void AddSC_DuelReset();
+void AddSC_item_custom_summon();
+void AddSC_vip_commandscript();
+void AddSC_gm_monitoring();
+void AddSC_boss_kill_history();
+void AddSC_System_Censure()
+
 //examples
 void AddSC_example_creature();
 void AddSC_example_escort();
 void AddSC_example_gossip_codebox();
 void AddSC_example_misc();
 void AddSC_example_commandscript();
-void AddSC_item_custom_summon();
-void AddSC_DuelReset();
-void AddSC_vip_commandscript();
-void AddSC_gm_monitoring();
-void AddSC_boss_kill_history();
 
 // spells
 void AddSC_deathknight_spell_scripts();
@@ -1270,5 +1273,6 @@ void AddCustomScripts()
     AddSC_vip_commandscript();
     AddSC_gm_monitoring();
     AddSC_boss_kill_history();
+    AddSC_System_Censure();
 #endif
 }

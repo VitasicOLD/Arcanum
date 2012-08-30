@@ -24,7 +24,7 @@
 #include "Define.h"
 #include "revision.h"
 
-#define _PACKAGENAME "Core: Arcanum Core Private\nBased on: Trinity Core\nMain Developer: Melezhik Dimitro Dmitriy\n"
+#define _PACKAGENAME "Core: Arcanum Core Private\nBased on: Trinity Core\n"
 
 #if TRINITY_ENDIAN == TRINITY_BIGENDIAN
 # define _ENDIAN_STRING "big-endian"
