@@ -187,6 +187,7 @@ public:
         boss_skadiAI(Creature *c) : ScriptedAI(c), Summons(me)
         {
             m_pInstance = c->GetInstanceScript();
+            m_uiGraufGUID = 0;
         }
 
         InstanceScript* m_pInstance;
@@ -234,7 +235,7 @@ public:
             me->SetSpeed(MOVE_FLIGHT, 3.0f);
             me->SetReactState(REACT_AGGRESSIVE);
             //me->SetWalk(true);
-            if ((Unit::GetCreature((*me), m_uiGraufGUID) == NULL) && !me->IsMounted())
+            if ((Unit::GetCreature(*me, m_uiGraufGUID) == NULL) && !me->IsMounted())
                  me->SummonCreature(CREATURE_GRAUF,Location[0].GetPositionX(),Location[0].GetPositionY(),Location[0].GetPositionZ(),3.0f);
             if (m_pInstance)
             {
@@ -248,7 +249,7 @@ public:
             me->SetCanFly(false);
             me->Dismount();
             me->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE | UNIT_FLAG_NON_ATTACKABLE);
-            if (Unit::GetCreature((*me), m_uiGraufGUID) == NULL)
+            if (!Unit::GetCreature(*me, m_uiGraufGUID))
                 me->SummonCreature(CREATURE_GRAUF,Location[0].GetPositionX(),Location[0].GetPositionY(),Location[0].GetPositionZ(),3.0f);
         }
 

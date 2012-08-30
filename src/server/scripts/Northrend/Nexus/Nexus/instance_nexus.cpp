@@ -57,6 +57,9 @@ public:
 
             Anomalus = 0;
             Keristrasza = 0;
+            AnomalusContainmentSphere = 0;
+            OrmoroksContainmentSphere = 0;
+            TelestrasContainmentSphere = 0;
         }
 
         void OnCreatureCreate(Creature* creature)
