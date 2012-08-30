@@ -72,7 +72,7 @@ RealmID = 1
 #        Example:     "@prefix@/share/trinitycore"
 #        Default:     "."
 
-DataDir = "."
+DataDir = "/home/server/wow/lk/data"
 
 #
 #    LogsDir
@@ -81,7 +81,7 @@ DataDir = "."
 #                     Logs directory must exists, or log file creation will be disabled.
 #        Default:     "" - (Log files will be stored in the current path)
 
-LogsDir = ""
+LogsDir = "/home/server/wow/lk/logs"
 
 #
 #    LoginDatabaseInfo
@@ -98,9 +98,9 @@ LogsDir = ""
 #                     "127.0.0.1;3306;trinity;trinity;world"      - (WorldDatabaseInfo)
 #                     "127.0.0.1;3306;trinity;trinity;characters" - (CharacterDatabaseInfo)
 
-LoginDatabaseInfo     = "127.0.0.1;3306;trinity;trinity;auth"
-WorldDatabaseInfo     = "127.0.0.1;3306;trinity;trinity;world"
-CharacterDatabaseInfo = "127.0.0.1;3306;trinity;trinity;characters"
+LoginDatabaseInfo     = "127.0.0.1;3306;root;root;auth"
+WorldDatabaseInfo     = "127.0.0.1;3306;root;root;world"
+CharacterDatabaseInfo = "127.0.0.1;3306;root;root;characters"
 
 #
 #    LoginDatabase.WorkerThreads
@@ -190,7 +190,7 @@ Compression = 1
 #                     1+  - (Enabled)
 #                     0   - (Disabled, No limit)
 
-PlayerLimit = 100
+PlayerLimit = 800
 
 #
 #    SaveRespawnTimeImmediately
@@ -440,7 +440,7 @@ LogFile = "Server.log"
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-LogTimestamp = 0
+LogTimestamp = 1
 
 #
 #    LogFileLevel
@@ -450,7 +450,7 @@ LogTimestamp = 0
 #                     2 - (Detail)
 #                     3 - (Full/Debug)
 
-LogFileLevel = 0
+LogFileLevel = 1
 
 #
 #    Debug Log Mask
@@ -570,7 +570,7 @@ GmLogFile = "GM.log"
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-GmLogTimestamp = 0
+GmLogTimestamp = 1
 
 #
 #    GmLogPerAccount
@@ -595,7 +595,7 @@ RaLogFile = "RA.log"
 #        Example:     "Arena.log" - (Enabled)
 #        Default:     ""          - (Disabled)
 
-ArenaLogFile = ""
+ArenaLogFile = "Arena.log"
 
 #
 #    ArenaLog.ExtendedInfo
@@ -651,7 +651,7 @@ SQLDriverQueryLogging = 0
 #        Example:     "13 11 9 5" - (Enabled)
 #        Default:     ""          - (Disabled)
 
-LogColors = ""
+LogColors = "10 11 9 5"
 
 #
 #    EnableLogDB
@@ -725,7 +725,7 @@ ChatLogFile = "Chat.log"
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-ChatLogTimestamp = 0
+ChatLogTimestamp = 1
 
 #
 #    ChatLogs.Channel
@@ -733,7 +733,7 @@ ChatLogTimestamp = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-ChatLogs.Channel = 0
+ChatLogs.Channel = 1
 
 #
 #    ChatLogs.Whisper
@@ -741,7 +741,7 @@ ChatLogs.Channel = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-ChatLogs.Whisper = 0
+ChatLogs.Whisper = 1
 
 #
 #    ChatLogs.SysChan
@@ -749,7 +749,7 @@ ChatLogs.Whisper = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-ChatLogs.SysChan = 0
+ChatLogs.SysChan = 1
 
 #
 #    ChatLogs.Party
@@ -783,7 +783,7 @@ ChatLogs.Guild = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-ChatLogs.Public = 0
+ChatLogs.Public = 1
 
 #
 #    ChatLogs.Addon
@@ -1392,7 +1392,7 @@ BeepAtStart = 1
 #        Example:     "Welcome to John\'s Server@This server runs on Trinity Core."
 #        Default:     "Welcome to a Trinity Core server."
 
-Motd = "Welcome to a Trinity Core server."
+Motd = "Welcome to freedom-wow server."
 
 #
 #    Server.LoginInfo
@@ -1584,7 +1584,7 @@ AllowTwoSide.Interaction.Mail = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-AllowTwoSide.WhoList = 0
+AllowTwoSide.WhoList = 1
 
 #
 #    AllowTwoSide.AddFriend
@@ -1794,7 +1794,7 @@ ListenRange.Yell = 300
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-ChatFakeMessagePreventing = 0
+ChatFakeMessagePreventing = 1
 
 #
 #    ChatStrictLinkChecking.Severity
@@ -1807,7 +1807,7 @@ ChatFakeMessagePreventing = 0
 #                         work correctly, please assure that you have extracted locale DBCs of
 #                         every language specific client playing on this server)
 
-ChatStrictLinkChecking.Severity = 0
+ChatStrictLinkChecking.Severity = 3
 
 #
 #    ChatStrictLinkChecking.Kick
@@ -1869,7 +1869,7 @@ ChatLevelReq.Channel = 1
 #        Description: Time requirement for characters to be able to write in chat channels.
 #        Default:     1800 - 30mins
 
-ChatTimeReq.Channel = 1800
+ChatTimeReq.Channel = 0
 
 
 #
@@ -1884,7 +1884,7 @@ ChatLevelReq.Whisper = 1
 #        Description: Time requirement for characters to be able to whisper other characters.
 #        Default:     1800 - 30mins
 
-ChatTimeReq.Whisper = 1800
+ChatTimeReq.Whisper = 0
 
 #
 #    ChatLevelReq.Say
@@ -1898,7 +1898,7 @@ ChatLevelReq.Say = 1
 #        Description: Level requirement for characters to be able to use say/yell/emote.
 #        Default:     1800 - 30mins
 
-ChatTimeReq.Say = 1800
+ChatTimeReq.Say = 0
 
 #
 #    AllowPlayerCommands
@@ -1949,7 +1949,7 @@ Channel.CityOnlyFlag = 0
 #                     0 - (Disable)
 #                     1 - (Enable)
 
-GM.LoginState = 2
+GM.LoginState = 1
 
 #
 #    GM.Visible
@@ -1958,7 +1958,7 @@ GM.LoginState = 2
 #                     0 - (Invisible)
 #                     1 - (Visible)
 
-GM.Visible = 2
+GM.Visible = 0
 
 #
 #    GM.Chat
@@ -1967,7 +1967,7 @@ GM.Visible = 2
 #                     0 - (Disable)
 #                     1 - (Enable)
 
-GM.Chat = 2
+GM.Chat = 1
 
 #
 #    GM.WhisperingTo
@@ -2306,9 +2306,9 @@ Rate.MoveSpeed = 1
 #                     (dbc value). Higher value increases the time between resets, 
 #                     lower value lowers the time, you need clean instance_reset in 
 #                     characters db in order to let new values work.
-#        Default:     1
+#        Default:     1   // 0.142857142 ~ 1d
 
-Rate.InstanceResetTime = 1
+Rate.InstanceResetTime = 0.142857142
 
 #
 #    SkillGain.Crafting
@@ -2451,7 +2451,7 @@ Die.Command.Mode = 1
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-AutoBroadcast.On = 0
+AutoBroadcast.On = 1
 
 #
 #    AutoBroadcast.Center
@@ -2460,14 +2460,14 @@ AutoBroadcast.On = 0
 #                     1 - (Notify)
 #                     2 - (Both)
 
-AutoBroadcast.Center = 0
+AutoBroadcast.Center = 2
 
 #
 #    AutoBroadcast.Timer
 #        Description: Timer (in milliseconds) for auto broadcasts.
 #        Default:     60000 - (60 seconds)
 
-AutoBroadcast.Timer = 60000
+AutoBroadcast.Timer = 360000
 
 #
 ###################################################################################################
@@ -2488,7 +2488,7 @@ Battleground.CastDeserter = 1
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-Battleground.QueueAnnouncer.Enable = 0
+Battleground.QueueAnnouncer.Enable = 1
 
 #
 #    Battleground.QueueAnnouncer.PlayerOnly
@@ -2496,7 +2496,7 @@ Battleground.QueueAnnouncer.Enable = 0
 #        Default:     0 - (System message, Anyone can see it)
 #                     1 - (Private, Only queued players can see it)
 
-Battleground.QueueAnnouncer.PlayerOnly = 0
+Battleground.QueueAnnouncer.PlayerOnly = 1
 
 #
 #    Battleground.InvitationType
@@ -2570,7 +2570,7 @@ Arena.RatingDiscardTimer = 600000
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-Arena.AutoDistributePoints = 0
+Arena.AutoDistributePoints = 1
 
 #
 #    Arena.AutoDistributeInterval
@@ -2578,7 +2578,7 @@ Arena.AutoDistributePoints = 0
 #                     distribution is enabled.
 #        Default:     7 - (Weekly)
 
-Arena.AutoDistributeInterval = 7
+Arena.AutoDistributeInterval = 1
 
 #
 #    Arena.QueueAnnouncer.Enable
@@ -2586,7 +2586,7 @@ Arena.AutoDistributeInterval = 7
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-Arena.QueueAnnouncer.Enable = 0
+Arena.QueueAnnouncer.Enable = 1
 
 #
 #    Arena.ArenaSeason.ID
@@ -2768,7 +2768,7 @@ CharDelete.MinLevel = 0
 #        Default:     30 - (Enabled)
 #                     0  - (Disabled, Don't delete any characters)
 
-CharDelete.KeepDays = 30
+CharDelete.KeepDays = 360
 
 #
 ###################################################################################################
@@ -3006,7 +3006,7 @@ Anticheat.MaxReportsForDailyReport = 70
 #              1 - Enable
 #
 
-DuelReset.Cooldown.OnStart = 0
+DuelReset.Cooldown.OnStart = 1
 
 #
 #     DuelReset.Cooldown.OnFinish
@@ -3042,7 +3042,7 @@ DuelReset.Cooldown.Max.Energy.OnStart = 0
 #              1 - Enable
 #
 
-DuelReset.Cooldown.Reset.Energy.OnStart = 0
+DuelReset.Cooldown.Reset.Energy.OnStart = 1
 
 ###################################################################################################
 
