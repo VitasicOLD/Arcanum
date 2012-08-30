@@ -28,6 +28,7 @@ void AddSC_System_Censure();
 void AddSC_transmogrify_script();
 void AddSC_npc_title();
 void AddSC_npc_arena_setup();
+void AddSC_npc_teleport();
 
 //examples
 void AddSC_example_creature();
@@ -1280,5 +1281,6 @@ void AddCustomScripts()
     AddSC_transmogrify_script();
     AddSC_npc_title();
     AddSC_npc_arena_setup();
+    AddSC_npc_teleport();
 #endif
 }
