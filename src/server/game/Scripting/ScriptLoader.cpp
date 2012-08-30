@@ -26,6 +26,7 @@ void AddSC_gm_monitoring();
 void AddSC_boss_kill_history();
 void AddSC_System_Censure();
 void AddSC_transmogrify_script();
+void AddSC_npc_title();
 
 //examples
 void AddSC_example_creature();
@@ -1276,5 +1277,6 @@ void AddCustomScripts()
     AddSC_boss_kill_history();
     AddSC_System_Censure();
     AddSC_transmogrify_script();
+    AddSC_npc_title();
 #endif
 }

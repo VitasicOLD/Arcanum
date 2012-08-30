@@ -17,6 +17,7 @@ set(scripts_STAT_SRCS
   Custom/boss_kill_history.cpp
   Custom/chat_censure.cpp
   Custom/npc_transmogrify.cpp
+  Custom/npc_title.cpp
 )
 
 message("  -> Prepared: Custom")
