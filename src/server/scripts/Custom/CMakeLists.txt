@@ -18,6 +18,7 @@ set(scripts_STAT_SRCS
   Custom/chat_censure.cpp
   Custom/npc_transmogrify.cpp
   Custom/npc_title.cpp
+  Custom/npc_arena_teamTop.cpp
 )
 
 message("  -> Prepared: Custom")
