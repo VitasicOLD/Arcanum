@@ -10040,7 +10040,8 @@ void Unit::SetCharm(Unit* charm, bool apply)
         if (!charm->AddUInt64Value(UNIT_FIELD_CHARMEDBY, GetGUID()))
             sLog->outCrash("Unit %u is being charmed, but it already has a charmer " UI64FMTD "", charm->GetEntry(), charm->GetCharmerGUID());
 
-        if (charm->HasUnitMovementFlag(MOVEMENTFLAG_WALKING))
+        m_isWalkingBeforeCharm = charm->IsWalking();
+        if (m_isWalkingBeforeCharm)
         {
             charm->SetWalk(false);
             charm->SendMovementFlagUpdate();
@@ -10076,6 +10077,12 @@ void Unit::SetCharm(Unit* charm, bool apply)
             charm->m_ControlledByPlayer = false;
             charm->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_PVP_ATTACKABLE);
             charm->SetByteValue(UNIT_FIELD_BYTES_2, 1, 0);
+        }
+        
+        if (charm->IsWalking() != m_isWalkingBeforeCharm)
+        {
+            charm->SetWalk(m_isWalkingBeforeCharm);
+            charm->SendMovementFlagUpdate(true); // send packet to self, to update movement state on player.
         }
 
         if (charm->GetTypeId() == TYPEID_PLAYER
@@ -14794,11 +14801,11 @@ void Unit::StopMoving()
     init.Launch();
 }
 
-void Unit::SendMovementFlagUpdate()
+void Unit::SendMovementFlagUpdate(bool self /* = false */)
 {
     WorldPacket data;
     BuildHeartBeatMsg(&data);
-    SendMessageToSet(&data, false);
+    SendMessageToSet(&data, self);
 }
 
 bool Unit::IsSitState() const
