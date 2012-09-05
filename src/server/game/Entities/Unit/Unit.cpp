@@ -10359,6 +10359,10 @@ uint32 Unit::SpellDamageBonus(Unit* victim, SpellInfo const* spellProto, uint32 
 {
     if (!spellProto || !victim || damagetype == DIRECT_DAMAGE)
         return pdamage;
+    
+    // Some spells don't benefit from done mods
+    if (spellProto->AttributesEx3 & SPELL_ATTR3_NO_DONE_BONUS)
+        return pdamage;
 
     // small exception for Deep Wounds, can't find any general rule
     // should ignore ALL damage mods, they already calculated in trigger spell
@@ -10853,13 +10857,6 @@ uint32 Unit::SpellDamageBonus(Unit* victim, SpellInfo const* spellProto, uint32 
             coeff /= 100.0f;
         }
         DoneTotal += int32(DoneAdvertisedBenefit * coeff * factorMod);
-    }
-
-    // Some spells don't benefit from done mods
-    if (spellProto->AttributesEx3 & SPELL_ATTR3_NO_DONE_BONUS)
-    {
-        DoneTotal = 0;
-        DoneTotalMod = 1.0f;
     }
 
     // Some spells don't benefit from pct done mods
