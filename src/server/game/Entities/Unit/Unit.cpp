@@ -253,6 +253,7 @@ m_HostileRefManager(this)
 
     _focusSpell = NULL;
     _targetLocked = false;
+    _isWalkingBeforeCharm = false;
 }
 
 ////////////////////////////////////////////////////////////
