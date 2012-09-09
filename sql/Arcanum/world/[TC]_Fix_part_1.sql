@@ -65,3 +65,6 @@ INSERT INTO `achievement_criteria_data`(`criteria_id`,`type`,`value1`,`value2`,`
 (12578,2,0,0,''),
 (7623,2,0,0,''),
 (3371,2,0,0,'');
+
+-- Fix OfferRewardText for quest "Warsong Supplies"
+UPDATE `quest_template` SET `OfferRewardText`='Excellent, $N. You''ve saved me a lot of work!$b$bBut don''t think that I''m not grateful!' WHERE `Id`=6571;
