@@ -68,3 +68,8 @@ INSERT INTO `achievement_criteria_data`(`criteria_id`,`type`,`value1`,`value2`,`
 
 -- Fix OfferRewardText for quest "Warsong Supplies"
 UPDATE `quest_template` SET `OfferRewardText`='Excellent, $N. You''ve saved me a lot of work!$b$bBut don''t think that I''m not grateful!' WHERE `Id`=6571;
+
+-- DB/Game Event: Update Darkmoon Faire start times
+UPDATE `game_event` SET `start_time`='2012-11-04 00:01:00' WHERE `eventEntry`=3; -- Darkmoon Faire - Terrokkar 
+UPDATE `game_event` SET `start_time`='2012-12-02 00:01:00' WHERE `eventEntry`=4; -- Darkmoon Faire - Elwynn 
+UPDATE `game_event` SET `start_time`='2012-10-07 00:01:00' WHERE `eventEntry`=5; -- Darkmoon Faire - Mulgore
