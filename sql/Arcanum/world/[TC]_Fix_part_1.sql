@@ -76,3 +76,29 @@ UPDATE `game_event` SET `start_time`='2012-10-07 00:01:00' WHERE `eventEntry`=5;
 
 -- DB/Quests: Fix "Homeward Bound" completion text
 UPDATE `quest_template` SET `OfferRewardText`="What!? If I knew that Pao'ka Swiftmountain was going to snoop around Highperch, I would have chained him to a totem! His father was reluctant allowing him to come with me to Thousand Needles. We came here to study the different creatures that inhabit these beautiful lands.$b$bI appreciate the help you have shown Pao'ka. I hope this covers any misfortunes this deed has cost you." WHERE `Id`=4770;
+
+UPDATE `creature_text` SET `text`='Good news, everyone! I think I''ve perfected a plague that will destroy all life on Azeroth!' WHERE `entry`=36678 AND `groupid`=4 AND `id`=0;
+
+-- Grark Lorkrub should be available only when Kill On Sight: High Ranking Dark Iron Officials is complete
+UPDATE `quest_template` SET `NextQuestId`=4122 WHERE `Id`=4082;
+UPDATE `quest_template` SET `PrevQuestId`=4082 WHERE `Id`=4122;
+
+-- Fix some quest requirements
+UPDATE `quest_template` SET `PrevQuestId`=3906 WHERE `Id` IN (3907,7201); -- Disharmony of Fire and The Last Element are available only, if Disharmony of Flame is completed
+
+UPDATE `creature_template` SET `flags_extra`=`flags_extra`|256 WHERE `entry` IN (36897, 38138); -- Little Ooze
+
+-- Vic's Keys drop chance ( http://old.wowhead.com/object=190778 ) by nelegalno
+UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance` = -100 WHERE `entry`=24861 AND `item`=39264;
+
+-- Finding the Keymaster by nelegalno
+UPDATE `quest_template` SET `SpecialFlags` = 0, `RequiredSpellCast1` = 0 WHERE `ID` = 10256;
+DELETE FROM `event_scripts` WHERE id=12857;
+INSERT INTO `event_scripts` (`id`,`delay`,`command`,`datalong`,`datalong2`,`dataint`,`x`,`y`,`z`,`o`) VALUES
+(12857,0,10,19938,3000000,0,2248.43,2227.97,138.56,2.48121),
+(12857,1,8,19938,1,0,0,0,0,0);
+
+UPDATE `creature_model_info` SET `modelid_other_gender`=4264 WHERE `modelid`=4261; -- Female orc grunt
+UPDATE `creature_model_info` SET `modelid_other_gender`=4263 WHERE `modelid`=4262; -- Female tauren
+UPDATE `creature_model_info` SET `modelid_other_gender`=4262 WHERE `modelid`=4263; -- Male tauren
+UPDATE `creature_model_info` SET `modelid_other_gender`=4261 WHERE `modelid`=4264; -- Male orc grunt
