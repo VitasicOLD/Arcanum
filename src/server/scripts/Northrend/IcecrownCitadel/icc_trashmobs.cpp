@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2011 Arcanum Core Private <https://bitbucket.org/Dimitro/arcanum-core-private/>
+* Copyright (C) 2012 Arcanum Core Private <https://github.com/Vitasic/Arcanum/>
 */
 
 #include "ScriptPCH.h"
