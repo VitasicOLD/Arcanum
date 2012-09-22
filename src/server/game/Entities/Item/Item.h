@@ -338,6 +338,12 @@ class Item : public Object
         bool CheckSoulboundTradeExpire();
 
         void BuildUpdate(UpdateDataMapType&);
+		
+		// custom
+        uint32 GetFakeEntry();i
+        bool DeleteFakeEntry();
+        static void DeleteFakeFromDB(uint32 lowGUID);
+        void SetFakeEntry(uint32 entry);
 
         uint32 GetScriptId() const { return GetTemplate()->ScriptId; }
     private:
