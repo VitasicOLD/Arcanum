@@ -67,8 +67,8 @@ public:
 
     bool OnGossipHello(Player* player, Creature* creature)
     {
-        player->ADD_GOSSIP_ITEM_EXTENDED(0, "Сменить эмблемы льда на эмблемы триумфа", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1, "Введите количество эмблем, которые вы хотите обменять.", 0, true);
-        player->ADD_GOSSIP_ITEM_EXTENDED(0, "Сменить эмблемы триумфа на эмблемы льда", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2, "Введите количество эмблем, которые вы хотите обменять.", 0, true);
+        player->ADD_GOSSIP_ITEM_EXTENDED(0, "Cambia Emblemas de escarcha por Emblemas de triunfo", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1, "Introduce el número de Emblemas que desea intercambiar.", 0, true);
+        player->ADD_GOSSIP_ITEM_EXTENDED(0, "Cambia Emblemas de triunfo por Emblemas de Escarcha", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2, "Introduce el número de Emblemas que desea intercambiar.", 0, true);
 
         player->SEND_GOSSIP_MENU(3961, creature->GetGUID());
         return true;
@@ -92,7 +92,7 @@ public:
             }
             else
             {
-                creature->MonsterWhisper("Недостаточно эмблем льда.", player->GetGUID());
+                creature->MonsterWhisper("No tienes suficiente Emblemas de Escarcha.", player->GetGUID());
             }
             player->CLOSE_GOSSIP_MENU();
             return true;
@@ -107,7 +107,7 @@ public:
             }
             else
             {
-                creature->MonsterWhisper("Недостаточно эмблем триумфа.", player->GetGUID());
+                creature->MonsterWhisper("No tienes suficientes Emblemas de triunfo.", player->GetGUID());
             }
             player->CLOSE_GOSSIP_MENU();
             return true;
@@ -129,7 +129,7 @@ public:
             player->SEND_GOSSIP_MENU(player->GetGossipTextId(creature), creature->GetGUID());
         }
         else
-            creature->MonsterWhisper("Ваш аккаунт не является VIP аккаунтом.", player->GetGUID());
+            creature->MonsterWhisper("Su cuenta no es una cuenta VIP.", player->GetGUID());
 
         return true;
     }
