@@ -16,7 +16,6 @@ set(scripts_STAT_SRCS
   Custom/gm_monitoring.cpp
   Custom/boss_kill_history.cpp
   Custom/chat_censure.cpp
-  Custom/npc_transmogrify.cpp
   Custom/npc_title.cpp
   Custom/npc_arena_teamTop.cpp
 )

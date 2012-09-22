@@ -24,8 +24,7 @@ void AddSC_item_custom_summon();
 void AddSC_vip_commandscript();
 void AddSC_gm_monitoring();
 void AddSC_boss_kill_history();
-void AddSC_System_Censure();
-void AddSC_transmogrify_script();
+void AddSC_System_Censure()
 void AddSC_npc_title();
 void AddSC_npc_arena_setup();
 void AddSC_npc_teleport();
@@ -1280,7 +1279,6 @@ void AddCustomScripts()
     AddSC_gm_monitoring();
     AddSC_boss_kill_history();
     AddSC_System_Censure();
-    AddSC_transmogrify_script();
     AddSC_npc_title();
     AddSC_npc_arena_setup();
     AddSC_npc_teleport();
