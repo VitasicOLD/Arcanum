@@ -40,19 +40,18 @@ void CheckMessage(Player* player, std::string& msg, uint32 lang, Player* /*recei
     std::string lower = msg;
     std::transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
  
-    uint8 cheksSize = 11;
+    uint8 cheksSize = 10;
     std::string checks[cheksSize];
     checks[0] ="http://";
     checks[1] =".com";
     checks[2] =".www";
     checks[3] =".net";
     checks[4] =".org";
-    checks[5] =".ru";
+    checks[5] =".es";
     checks[6] ="www.";
     checks[7] ="wow-";
     checks[8] ="-wow";
     checks[9] ="rondor";
-	checks[10] =".es";
     for (int i = 0; i < cheksSize; ++i)
         if (lower.find(checks[i]) != std::string::npos)
         {
