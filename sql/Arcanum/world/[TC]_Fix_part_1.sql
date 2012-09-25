@@ -102,3 +102,7 @@ UPDATE `creature_model_info` SET `modelid_other_gender`=4264 WHERE `modelid`=426
 UPDATE `creature_model_info` SET `modelid_other_gender`=4263 WHERE `modelid`=4262; -- Female tauren
 UPDATE `creature_model_info` SET `modelid_other_gender`=4262 WHERE `modelid`=4263; -- Male tauren
 UPDATE `creature_model_info` SET `modelid_other_gender`=4261 WHERE `modelid`=4264; -- Male orc grunt
+
+-- Reload item_template and locales_item command
+DELETE FROM `command` WHERE `name` = 'reload item_template';
+INSERT INTO `command` VALUES ('reload item_template', 3, 'Syntax: .reload item_template. Reload item_template and locales_item tables.');
