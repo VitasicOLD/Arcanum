@@ -943,7 +943,8 @@ public:
     {
         sLog->outString("Re-Loading Item Prototypes... ");
         sObjectMgr->LoadItemTemplates();
-        handler->SendGlobalGMSysMessage("DB table `item_template` reloaded.");
+        sObjectMgr->LoadItemLocales();
+        handler->SendGlobalGMSysMessage("DB tables `item_template` and `locales_item` reloaded.");
         return true;
     }
 
