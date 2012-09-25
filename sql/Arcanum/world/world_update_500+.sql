@@ -122,3 +122,7 @@ UPDATE `creature_model_info` SET `modelid_other_gender`=4261 WHERE `modelid`=426
 -- Reload item_template and locales_item command
 DELETE FROM `command` WHERE `name` = 'reload item_template';
 INSERT INTO `command` VALUES ('reload item_template', 3, 'Syntax: .reload item_template. Reload item_template and locales_item tables.');
+
+DELETE FROM `spell_bonus_data` WHERE `entry` = 61840;
+INSERT INTO `spell_bonus_data` (`entry`,`direct_bonus`,`ap_bonus`,`ap_dot_bonus`,`comments`) VALUES
+(61840, 0, 0, 0, 0, 'No bonus for Righteous Vengance DoT');
