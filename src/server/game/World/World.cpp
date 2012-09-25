@@ -1254,6 +1254,9 @@ void World::LoadConfigSettings(bool reload)
     m_bool_configs[CONFIG_DUEL_RESET_COOLDOWN_MAX_ENERGY_ON_START] = ConfigMgr::GetBoolDefault("DuelReset.Cooldown.Max.Energy.OnStart", false);
     m_bool_configs[CONFIG_DUEL_RESET_COOLDOWN_RESET_ENERGY_ON_START] = ConfigMgr::GetBoolDefault("DuelReset.Cooldown.Reset.Energy.OnStart", false);
 
+    // Anti Reklama
+    m_bool_configs[CONFIG_ANTI_REKLAMA_ENABLE] = ConfigMgr::GetBoolDefault("Anti.Reklama.Enable", false);
+
     //Gm enters game
     m_bool_configs[CONFIG_GM_ENTERS_GAME] = ConfigMgr::GetBoolDefault("GM.Enters.Game", true);
 
