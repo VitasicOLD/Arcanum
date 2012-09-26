@@ -1,18 +1,22 @@
-/* npc_arena_top_team.sql */
+п»ї-- РќРµ СЃС‚Р°Р» РёСЃРєР°С‚СЊ С‚РµР»РµРїРѕСЂС‚РµСЂР° Рё РїРµСЂРµРґРµР»Р°Р» С‚СѓС‚
+INSERT INTO creature_template (entry, modelid1, name, subname, IconName, gossip_menu_id, minlevel, maxlevel, Health_mod, Mana_mod, Armor_mod, faction_A, faction_H, npcflag, speed_walk, speed_run, scale, rank, dmg_multiplier, unit_class, unit_flags, type, type_flags, InhabitType, RegenHealth, flags_extra, AiName) VALUES
+('100000', '19645', "РњР°СЃС‚РµСЂ С‚РµР»РµРїРѕСЂС‚Р°С†РёРё", "", 'Directions', '50000', 71, 71, 1.56, 1.56, 1.56, 35, 35, 3, 1, 1.14286, 1.25, 1, 1, 1, 2, 7, 138936390, 3, 1, 2, 'SmartAI');
+
+-- npc_arena_top_team
 REPLACE INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `equipment_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES
 ('100090', '0', '0', '0', '0', '0', '27164', '0', '0', '0', 'Arena TeamTop', 'freedom-wow', '', '0', '59', '61', '0', '35', '35', '1', '1.48', '1.14286', '0.0', '0', '655.0', '663.0', '0', '158', '1.0', '1500', '1900', '1', '0', '0', '0', '0', '0', '0', '0', '0.0', '0.0', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', '3', '1.0', '1.0', '1.0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', 'npc_arena_teamTop', '1');
 
- /* transmogrification_rus.sql */
+-- transmogrification_rus
 INSERT INTO creature_template (entry, modelid1, name, subname, IconName, gossip_menu_id, minlevel, maxlevel, Health_mod, Mana_mod, Armor_mod, faction_A, faction_H, npcflag, speed_walk, speed_run, scale, rank, dmg_multiplier, unit_class, unit_flags, type, type_flags, InhabitType, RegenHealth, flags_extra, ScriptName) VALUES 
 ('190001', '17689', "Warpweaver", "Transmogrifier", 'Speak', '50000', 71, 71, 1.56, 1.56, 1.56, 35, 35, 3, 1, 1.14286, 1.25, 1, 1, 1, 2, 7, 138936390, 3, 1, 2, 'npc_transmogrify'); 
-INSERT INTO locales_creature VALUES ('190001', '', '', '', '', '', '', '', 'Искажающий пространство', null, null, null, null, null, null, null, 'Трансмогрификатор');
+INSERT INTO locales_creature VALUES ('190001', '', '', '', '', '', '', '', 'РСЃРєР°Р¶Р°СЋС‰РёР№ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ', null, null, null, null, null, null, null, 'РўСЂР°РЅСЃРјРѕРіСЂРёС„РёРєР°С‚РѕСЂ');
 INSERT INTO `gossip_menu` VALUES (51000, 51000);
 INSERT INTO npc_text (ID, text0_0, em0_1) VALUES (51000, 'Put in the first slot of bag item, that you want to transmogrify. In the second slot, put item with perfect display.', 0);
-INSERT INTO locales_npc_text VALUES ('51000', null, null, null, null, null, null, null, 'Положите в первый слот рюкзака предмет, который вы хотите исказить. Во второй слот предмет, модель которого будет использована для трансмогрификации.', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO locales_npc_text VALUES ('51000', null, null, null, null, null, null, null, 'РџРѕР»РѕР¶РёС‚Рµ РІ РїРµСЂРІС‹Р№ СЃР»РѕС‚ СЂСЋРєР·Р°РєР° РїСЂРµРґРјРµС‚, РєРѕС‚РѕСЂС‹Р№ РІС‹ С…РѕС‚РёС‚Рµ РёСЃРєР°Р·РёС‚СЊ. Р’Рѕ РІС‚РѕСЂРѕР№ СЃР»РѕС‚ РїСЂРµРґРјРµС‚, РјРѕРґРµР»СЊ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅР° РґР»СЏ С‚СЂР°РЅСЃРјРѕРіСЂРёС„РёРєР°С†РёРё.', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 
-/* world_npc_title.sql */
+-- world_npc_title
 REPLACE INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `equipment_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES
-('100005', '0', '0', '0', '0', '0', '26725', '0', '26725', '0', 'Мастер званий', 'freedom-wow', '', '0', '59', '61', '0', '35', '35', '1', '1.48', '1.14286', '0.0', '0', '655.0', '663.0', '0', '158', '1.0', '1500', '1900', '1', '0', '0', '0', '0', '0', '0', '0', '0.0', '0.0', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', '3', '1.0', '1.0', '1.0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', 'npc_title', '1');
+('100005', '0', '0', '0', '0', '0', '26725', '0', '26725', '0', 'РњР°СЃС‚РµСЂ Р·РІР°РЅРёР№', 'freedom-wow', '', '0', '59', '61', '0', '35', '35', '1', '1.48', '1.14286', '0.0', '0', '655.0', '663.0', '0', '158', '1.0', '1500', '1900', '1', '0', '0', '0', '0', '0', '0', '0', '0.0', '0.0', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', '3', '1.0', '1.0', '1.0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', 'npc_title', '1');
 
 -- Spell script name linking for Defending Wyrmrest Temple: Destabilize Azure Dragonshrine Effect
 DELETE FROM `spell_script_names` WHERE `spell_id`=49370 ;
@@ -25,51 +29,51 @@ DELETE FROM `spell_bonus_data` WHERE `entry`=@Spell;
 INSERT INTO `spell_bonus_data` (`entry`,`direct_bonus`,`dot_bonus`,`ap_bonus`,`ap_dot_bonus`,`comments`) VALUES
 (@Spell,0,0,0,0, 'Flamecap Fire');
 
--- Русификация конечного эвента в Пещерах Стенаний
-UPDATE `script_texts` SET `content_loc8` = 'Я должен сделать необходимые приготовления перед тем, как Ритуал Пробуждения начнется. Вы должны защитить меня!' WHERE `entry` = -1043001;
-UPDATE `script_texts` SET `content_loc8` = 'Эти пещеры были когда-то храмом, который подавал надежду на возобновление растительности в Степи. Теперь это залы начных кошмаров.' WHERE `entry` = -1043002;
-UPDATE `script_texts` SET `content_loc8` = 'Пошлите! Мы должны продолжать. Еще нужно сделать много дел, прежде чем мы сможем вытащить Наралекса из его кошмара.' WHERE `entry` = -1043003;
-UPDATE `script_texts` SET `content_loc8` = 'В этом круге огня я должен произнести заклинание, которое должно изгнать духов, убитых Повелителями Змей.' WHERE `entry` = -1043004;
-UPDATE `script_texts` SET `content_loc8` = 'Пещеры были очищены. Теперь мы идем к Наралексу!' WHERE `entry` = -1043005;
-UPDATE `script_texts` SET `content_loc8` = 'Помимо кошмара, Наралекс заключен в вечный сон. Нужно разбудить его пока не стало слишком поздно!' WHERE `entry` = -1043006;
-UPDATE `script_texts` SET `content_loc8` = 'Защищайте меня, Смельчаки! Я буду углубляться в Изумрудный Сон, чтобы спасти Наралекса и положить конец этому!' WHERE `entry` = -1043007;
-UPDATE `script_texts` SET `content_loc8` = 'Это Мутанус Пожиратель является главной преградой пробуждения Наралекса! Без сомнений.' WHERE `entry` = -10430012;
-UPDATE `script_texts` SET `content_loc8` = 'Ах, я вырвался из страшного кошмара! Я благодарю тебя, мой верный ученик, вместе с храбрым товарищами.' WHERE `entry` = -10430015;
-UPDATE `script_texts` SET `content_loc8` = 'Мы должны идти и встретиться с другими учениками. Предстоит сделать много работы, прежде чем я могу сделать еще одну попытку восстановить Степи. Прощайте, Смельчаки!' WHERE `entry` = -10430016;
-UPDATE `script_texts` SET `content_loc8` = 'Наконец-то! Наралекса можно пробудить! Ну помогите мне, смелые искатели приключений!' WHERE `entry` = -1043000;
-UPDATE `script_texts` SET `content_loc8` = 'Наконец-то! Я пробудился!' WHERE `entry` = -1043013;
-UPDATE `script_texts` SET `content_loc8` = '%S начал выполнять Ритуал по пробуждению Наралекса' WHERE `entry` = -1043008;
-UPDATE `script_texts` SET `content_loc8` = '%S судорожно метается в кошмарном сне.' WHERE `entry` = -1043009;
-UPDATE `script_texts` SET `content_loc8` = '%S корчится в муках. Ученик пытается ему помочь!' WHERE `entry` = -1043010;
-UPDATE `script_texts` SET `content_loc8` = '%S увидел ужастное видение. Что-то шевелится под мутной воде.' WHERE `entry` = -1043011;
+-- Р СѓСЃРёС„РёРєР°С†РёСЏ РєРѕРЅРµС‡РЅРѕРіРѕ СЌРІРµРЅС‚Р° РІ РџРµС‰РµСЂР°С… РЎС‚РµРЅР°РЅРёР№
+UPDATE `script_texts` SET `content_loc8` = 'РЇ РґРѕР»Р¶РµРЅ СЃРґРµР»Р°С‚СЊ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РїСЂРёРіРѕС‚РѕРІР»РµРЅРёСЏ РїРµСЂРµРґ С‚РµРј, РєР°Рє Р РёС‚СѓР°Р» РџСЂРѕР±СѓР¶РґРµРЅРёСЏ РЅР°С‡РЅРµС‚СЃСЏ. Р’С‹ РґРѕР»Р¶РЅС‹ Р·Р°С‰РёС‚РёС‚СЊ РјРµРЅСЏ!' WHERE `entry` = -1043001;
+UPDATE `script_texts` SET `content_loc8` = 'Р­С‚Рё РїРµС‰РµСЂС‹ Р±С‹Р»Рё РєРѕРіРґР°-С‚Рѕ С…СЂР°РјРѕРј, РєРѕС‚РѕСЂС‹Р№ РїРѕРґР°РІР°Р» РЅР°РґРµР¶РґСѓ РЅР° РІРѕР·РѕР±РЅРѕРІР»РµРЅРёРµ СЂР°СЃС‚РёС‚РµР»СЊРЅРѕСЃС‚Рё РІ РЎС‚РµРїРё. РўРµРїРµСЂСЊ СЌС‚Рѕ Р·Р°Р»С‹ РЅР°С‡РЅС‹С… РєРѕС€РјР°СЂРѕРІ.' WHERE `entry` = -1043002;
+UPDATE `script_texts` SET `content_loc8` = 'РџРѕС€Р»РёС‚Рµ! РњС‹ РґРѕР»Р¶РЅС‹ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ. Р•С‰Рµ РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ РјРЅРѕРіРѕ РґРµР», РїСЂРµР¶РґРµ С‡РµРј РјС‹ СЃРјРѕР¶РµРј РІС‹С‚Р°С‰РёС‚СЊ РќР°СЂР°Р»РµРєСЃР° РёР· РµРіРѕ РєРѕС€РјР°СЂР°.' WHERE `entry` = -1043003;
+UPDATE `script_texts` SET `content_loc8` = 'Р’ СЌС‚РѕРј РєСЂСѓРіРµ РѕРіРЅСЏ СЏ РґРѕР»Р¶РµРЅ РїСЂРѕРёР·РЅРµСЃС‚Рё Р·Р°РєР»РёРЅР°РЅРёРµ, РєРѕС‚РѕСЂРѕРµ РґРѕР»Р¶РЅРѕ РёР·РіРЅР°С‚СЊ РґСѓС…РѕРІ, СѓР±РёС‚С‹С… РџРѕРІРµР»РёС‚РµР»СЏРјРё Р—РјРµР№.' WHERE `entry` = -1043004;
+UPDATE `script_texts` SET `content_loc8` = 'РџРµС‰РµСЂС‹ Р±С‹Р»Рё РѕС‡РёС‰РµРЅС‹. РўРµРїРµСЂСЊ РјС‹ РёРґРµРј Рє РќР°СЂР°Р»РµРєСЃСѓ!' WHERE `entry` = -1043005;
+UPDATE `script_texts` SET `content_loc8` = 'РџРѕРјРёРјРѕ РєРѕС€РјР°СЂР°, РќР°СЂР°Р»РµРєСЃ Р·Р°РєР»СЋС‡РµРЅ РІ РІРµС‡РЅС‹Р№ СЃРѕРЅ. РќСѓР¶РЅРѕ СЂР°Р·Р±СѓРґРёС‚СЊ РµРіРѕ РїРѕРєР° РЅРµ СЃС‚Р°Р»Рѕ СЃР»РёС€РєРѕРј РїРѕР·РґРЅРѕ!' WHERE `entry` = -1043006;
+UPDATE `script_texts` SET `content_loc8` = 'Р—Р°С‰РёС‰Р°Р№С‚Рµ РјРµРЅСЏ, РЎРјРµР»СЊС‡Р°РєРё! РЇ Р±СѓРґСѓ СѓРіР»СѓР±Р»СЏС‚СЊСЃСЏ РІ РР·СѓРјСЂСѓРґРЅС‹Р№ РЎРѕРЅ, С‡С‚РѕР±С‹ СЃРїР°СЃС‚Рё РќР°СЂР°Р»РµРєСЃР° Рё РїРѕР»РѕР¶РёС‚СЊ РєРѕРЅРµС† СЌС‚РѕРјСѓ!' WHERE `entry` = -1043007;
+UPDATE `script_texts` SET `content_loc8` = 'Р­С‚Рѕ РњСѓС‚Р°РЅСѓСЃ РџРѕР¶РёСЂР°С‚РµР»СЊ СЏРІР»СЏРµС‚СЃСЏ РіР»Р°РІРЅРѕР№ РїСЂРµРіСЂР°РґРѕР№ РїСЂРѕР±СѓР¶РґРµРЅРёСЏ РќР°СЂР°Р»РµРєСЃР°! Р‘РµР· СЃРѕРјРЅРµРЅРёР№.' WHERE `entry` = -10430012;
+UPDATE `script_texts` SET `content_loc8` = 'РђС…, СЏ РІС‹СЂРІР°Р»СЃСЏ РёР· СЃС‚СЂР°С€РЅРѕРіРѕ РєРѕС€РјР°СЂР°! РЇ Р±Р»Р°РіРѕРґР°СЂСЋ С‚РµР±СЏ, РјРѕР№ РІРµСЂРЅС‹Р№ СѓС‡РµРЅРёРє, РІРјРµСЃС‚Рµ СЃ С…СЂР°Р±СЂС‹Рј С‚РѕРІР°СЂРёС‰Р°РјРё.' WHERE `entry` = -10430015;
+UPDATE `script_texts` SET `content_loc8` = 'РњС‹ РґРѕР»Р¶РЅС‹ РёРґС‚Рё Рё РІСЃС‚СЂРµС‚РёС‚СЊСЃСЏ СЃ РґСЂСѓРіРёРјРё СѓС‡РµРЅРёРєР°РјРё. РџСЂРµРґСЃС‚РѕРёС‚ СЃРґРµР»Р°С‚СЊ РјРЅРѕРіРѕ СЂР°Р±РѕС‚С‹, РїСЂРµР¶РґРµ С‡РµРј СЏ РјРѕРіСѓ СЃРґРµР»Р°С‚СЊ РµС‰Рµ РѕРґРЅСѓ РїРѕРїС‹С‚РєСѓ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РЎС‚РµРїРё. РџСЂРѕС‰Р°Р№С‚Рµ, РЎРјРµР»СЊС‡Р°РєРё!' WHERE `entry` = -10430016;
+UPDATE `script_texts` SET `content_loc8` = 'РќР°РєРѕРЅРµС†-С‚Рѕ! РќР°СЂР°Р»РµРєСЃР° РјРѕР¶РЅРѕ РїСЂРѕР±СѓРґРёС‚СЊ! РќСѓ РїРѕРјРѕРіРёС‚Рµ РјРЅРµ, СЃРјРµР»С‹Рµ РёСЃРєР°С‚РµР»Рё РїСЂРёРєР»СЋС‡РµРЅРёР№!' WHERE `entry` = -1043000;
+UPDATE `script_texts` SET `content_loc8` = 'РќР°РєРѕРЅРµС†-С‚Рѕ! РЇ РїСЂРѕР±СѓРґРёР»СЃСЏ!' WHERE `entry` = -1043013;
+UPDATE `script_texts` SET `content_loc8` = '%S РЅР°С‡Р°Р» РІС‹РїРѕР»РЅСЏС‚СЊ Р РёС‚СѓР°Р» РїРѕ РїСЂРѕР±СѓР¶РґРµРЅРёСЋ РќР°СЂР°Р»РµРєСЃР°' WHERE `entry` = -1043008;
+UPDATE `script_texts` SET `content_loc8` = '%S СЃСѓРґРѕСЂРѕР¶РЅРѕ РјРµС‚Р°РµС‚СЃСЏ РІ РєРѕС€РјР°СЂРЅРѕРј СЃРЅРµ.' WHERE `entry` = -1043009;
+UPDATE `script_texts` SET `content_loc8` = '%S РєРѕСЂС‡РёС‚СЃСЏ РІ РјСѓРєР°С…. РЈС‡РµРЅРёРє РїС‹С‚Р°РµС‚СЃСЏ РµРјСѓ РїРѕРјРѕС‡СЊ!' WHERE `entry` = -1043010;
+UPDATE `script_texts` SET `content_loc8` = '%S СѓРІРёРґРµР» СѓР¶Р°СЃС‚РЅРѕРµ РІРёРґРµРЅРёРµ. Р§С‚Рѕ-С‚Рѕ С€РµРІРµР»РёС‚СЃСЏ РїРѕРґ РјСѓС‚РЅРѕР№ РІРѕРґРµ.' WHERE `entry` = -1043011;
 
--- Перевод по квесту 898
-UPDATE `script_texts` SET `content_loc8` = 'Будь рядом, $n. Мне понадобится твоя помощь. Возможно мне удастся вырваться отсюда. Пошли!' WHERE `entry` = -1000370;
-UPDATE `script_texts` SET `content_loc8` = 'Наконец-то! Северная часовня не охраняется! Мне нужно время, чтобы отдышаться!' WHERE `entry` = -1000371;
-UPDATE `script_texts` SET `content_loc8` = 'Теперь я чувствую себя лучше. Давайте вернемся к побегу. Пошли, $n.' WHERE `entry` = -1000372;
-UPDATE `script_texts` SET `content_loc8` = 'Похоже, что Флибустьеры Южных морей сильно закрепились на побережье. Это может стать проблемой.' WHERE `entry` = -1000373;
-UPDATE `script_texts` SET `content_loc8` = 'Помогай! $C атакуют!' WHERE `entry` = -1000374;
-UPDATE `script_texts` SET `content_loc8` = 'Пришло время для мести!' WHERE `entry` = -1000375;
-UPDATE `script_texts` SET `content_loc8` = '$C идет прямо на нас!' WHERE `entry` = -1000376;
-UPDATE `script_texts` SET `content_loc8` = 'Получай, $C' WHERE `entry` = -1000377;
-UPDATE `script_texts` SET `content_loc8` = 'Мы почти добрались! Давай ускоримся...' WHERE `entry` = -1000378;
-UPDATE `script_texts` SET `content_loc8` = 'Ах, сладкий воздух побега.' WHERE `entry` = -1000379;
-UPDATE `script_texts` SET `content_loc8` = 'Капитан Тало`тас Сияющий, $N помог мне сбежать! $N, я уверен, капитан вознаградит ваше мужество.' WHERE `entry` = -1000380;
+-- РџРµСЂРµРІРѕРґ РїРѕ РєРІРµСЃС‚Сѓ 898
+UPDATE `script_texts` SET `content_loc8` = 'Р‘СѓРґСЊ СЂСЏРґРѕРј, $n. РњРЅРµ РїРѕРЅР°РґРѕР±РёС‚СЃСЏ С‚РІРѕСЏ РїРѕРјРѕС‰СЊ. Р’РѕР·РјРѕР¶РЅРѕ РјРЅРµ СѓРґР°СЃС‚СЃСЏ РІС‹СЂРІР°С‚СЊСЃСЏ РѕС‚СЃСЋРґР°. РџРѕС€Р»Рё!' WHERE `entry` = -1000370;
+UPDATE `script_texts` SET `content_loc8` = 'РќР°РєРѕРЅРµС†-С‚Рѕ! РЎРµРІРµСЂРЅР°СЏ С‡Р°СЃРѕРІРЅСЏ РЅРµ РѕС…СЂР°РЅСЏРµС‚СЃСЏ! РњРЅРµ РЅСѓР¶РЅРѕ РІСЂРµРјСЏ, С‡С‚РѕР±С‹ РѕС‚РґС‹С€Р°С‚СЊСЃСЏ!' WHERE `entry` = -1000371;
+UPDATE `script_texts` SET `content_loc8` = 'РўРµРїРµСЂСЊ СЏ С‡СѓРІСЃС‚РІСѓСЋ СЃРµР±СЏ Р»СѓС‡С€Рµ. Р”Р°РІР°Р№С‚Рµ РІРµСЂРЅРµРјСЃСЏ Рє РїРѕР±РµРіСѓ. РџРѕС€Р»Рё, $n.' WHERE `entry` = -1000372;
+UPDATE `script_texts` SET `content_loc8` = 'РџРѕС…РѕР¶Рµ, С‡С‚Рѕ Р¤Р»РёР±СѓСЃС‚СЊРµСЂС‹ Р®Р¶РЅС‹С… РјРѕСЂРµР№ СЃРёР»СЊРЅРѕ Р·Р°РєСЂРµРїРёР»РёСЃСЊ РЅР° РїРѕР±РµСЂРµР¶СЊРµ. Р­С‚Рѕ РјРѕР¶РµС‚ СЃС‚Р°С‚СЊ РїСЂРѕР±Р»РµРјРѕР№.' WHERE `entry` = -1000373;
+UPDATE `script_texts` SET `content_loc8` = 'РџРѕРјРѕРіР°Р№! $C Р°С‚Р°РєСѓСЋС‚!' WHERE `entry` = -1000374;
+UPDATE `script_texts` SET `content_loc8` = 'РџСЂРёС€Р»Рѕ РІСЂРµРјСЏ РґР»СЏ РјРµСЃС‚Рё!' WHERE `entry` = -1000375;
+UPDATE `script_texts` SET `content_loc8` = '$C РёРґРµС‚ РїСЂСЏРјРѕ РЅР° РЅР°СЃ!' WHERE `entry` = -1000376;
+UPDATE `script_texts` SET `content_loc8` = 'РџРѕР»СѓС‡Р°Р№, $C' WHERE `entry` = -1000377;
+UPDATE `script_texts` SET `content_loc8` = 'РњС‹ РїРѕС‡С‚Рё РґРѕР±СЂР°Р»РёСЃСЊ! Р”Р°РІР°Р№ СѓСЃРєРѕСЂРёРјСЃСЏ...' WHERE `entry` = -1000378;
+UPDATE `script_texts` SET `content_loc8` = 'РђС…, СЃР»Р°РґРєРёР№ РІРѕР·РґСѓС… РїРѕР±РµРіР°.' WHERE `entry` = -1000379;
+UPDATE `script_texts` SET `content_loc8` = 'РљР°РїРёС‚Р°РЅ РўР°Р»Рѕ`С‚Р°СЃ РЎРёСЏСЋС‰РёР№, $N РїРѕРјРѕРі РјРЅРµ СЃР±РµР¶Р°С‚СЊ! $N, СЏ СѓРІРµСЂРµРЅ, РєР°РїРёС‚Р°РЅ РІРѕР·РЅР°РіСЂР°РґРёС‚ РІР°С€Рµ РјСѓР¶РµСЃС‚РІРѕ.' WHERE `entry` = -1000380;
 
--- Фикс квеста 4921 "Пропавшая без вести"
+-- Р¤РёРєСЃ РєРІРµСЃС‚Р° 4921 "РџСЂРѕРїР°РІС€Р°СЏ Р±РµР· РІРµСЃС‚Рё"
 UPDATE `creature_template` SET `npcflag` = 3 WHERE `entry` = 10668;
 
--- Русификация начальной зоны Рыцарей смерти.
--- Не оффлайк, перевод не точный
--- Если у кого то есть хоть какой-то перевод данной местности, просьба кинуть или в скайп, или в Request.
-UPDATE `script_texts` SET `content_loc8` = 'Ты сделал большую ошибку, злодей!' WHERE `entry` = -1609000;
-UPDATE `script_texts` SET `content_loc8` = 'Когда-то я был воином Света... Посмотрите, чем я стал...' WHERE `entry` = -1609001;
-UPDATE `script_texts` SET `content_loc8` = 'Смерть это единственное лекарство!' WHERE `entry` = -1609016;
-UPDATE `script_texts` SET `content_loc8` = 'В бой!' WHERE `entry` IN (1609012, 1609008);
-UPDATE `script_texts` SET `content_loc8` = 'Я выиграю свою свободу и оставлю это проклятое место!' WHERE `entry` = -1609005;
-UPDATE `script_texts` SET `content_loc8` = 'Нет спасения' WHERE `entry` = -1609080;
-UPDATE `script_texts` SET `content_loc8` = 'Запомни этот день, $n, ибо это тот день, когда ты будешь повержен!' WHERE `entry` = -1609081;
-UPDATE `script_texts` SET `content_loc8` = 'Не смеши меня.' WHERE `entry` = -1609083;
+-- Р СѓСЃРёС„РёРєР°С†РёСЏ РЅР°С‡Р°Р»СЊРЅРѕР№ Р·РѕРЅС‹ Р С‹С†Р°СЂРµР№ СЃРјРµСЂС‚Рё.
+-- РќРµ РѕС„С„Р»Р°Р№Рє, РїРµСЂРµРІРѕРґ РЅРµ С‚РѕС‡РЅС‹Р№
+-- Р•СЃР»Рё Сѓ РєРѕРіРѕ С‚Рѕ РµСЃС‚СЊ С…РѕС‚СЊ РєР°РєРѕР№-С‚Рѕ РїРµСЂРµРІРѕРґ РґР°РЅРЅРѕР№ РјРµСЃС‚РЅРѕСЃС‚Рё, РїСЂРѕСЃСЊР±Р° РєРёРЅСѓС‚СЊ РёР»Рё РІ СЃРєР°Р№Рї, РёР»Рё РІ Request.
+UPDATE `script_texts` SET `content_loc8` = 'РўС‹ СЃРґРµР»Р°Р» Р±РѕР»СЊС€СѓСЋ РѕС€РёР±РєСѓ, Р·Р»РѕРґРµР№!' WHERE `entry` = -1609000;
+UPDATE `script_texts` SET `content_loc8` = 'РљРѕРіРґР°-С‚Рѕ СЏ Р±С‹Р» РІРѕРёРЅРѕРј РЎРІРµС‚Р°... РџРѕСЃРјРѕС‚СЂРёС‚Рµ, С‡РµРј СЏ СЃС‚Р°Р»...' WHERE `entry` = -1609001;
+UPDATE `script_texts` SET `content_loc8` = 'РЎРјРµСЂС‚СЊ СЌС‚Рѕ РµРґРёРЅСЃС‚РІРµРЅРЅРѕРµ Р»РµРєР°СЂСЃС‚РІРѕ!' WHERE `entry` = -1609016;
+UPDATE `script_texts` SET `content_loc8` = 'Р’ Р±РѕР№!' WHERE `entry` IN (1609012, 1609008);
+UPDATE `script_texts` SET `content_loc8` = 'РЇ РІС‹РёРіСЂР°СЋ СЃРІРѕСЋ СЃРІРѕР±РѕРґСѓ Рё РѕСЃС‚Р°РІР»СЋ СЌС‚Рѕ РїСЂРѕРєР»СЏС‚РѕРµ РјРµСЃС‚Рѕ!' WHERE `entry` = -1609005;
+UPDATE `script_texts` SET `content_loc8` = 'РќРµС‚ СЃРїР°СЃРµРЅРёСЏ' WHERE `entry` = -1609080;
+UPDATE `script_texts` SET `content_loc8` = 'Р—Р°РїРѕРјРЅРё СЌС‚РѕС‚ РґРµРЅСЊ, $n, РёР±Рѕ СЌС‚Рѕ С‚РѕС‚ РґРµРЅСЊ, РєРѕРіРґР° С‚С‹ Р±СѓРґРµС€СЊ РїРѕРІРµСЂР¶РµРЅ!' WHERE `entry` = -1609081;
+UPDATE `script_texts` SET `content_loc8` = 'РќРµ СЃРјРµС€Рё РјРµРЅСЏ.' WHERE `entry` = -1609083;
 
 -- Criteria data for achievement 'Wrecking Ball'
 DELETE FROM `disables` WHERE `sourceType`=4 AND `entry` IN (3368, 3369, 3370, 12578, 7623, 3371);
