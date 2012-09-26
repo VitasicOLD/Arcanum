@@ -13,7 +13,7 @@ public:
         {
             if (player && AccountMgr::IsGMAccount(player->GetSession()->GetSecurity()))
             {
-                std::string sText = ("Игровой мастер " + std::string(player->GetSession()->GetPlayerName()) + " входит в игру.");
+                std::string sText = ("Un GM " + std::string(player->GetSession()->GetPlayerName()) + " entra en el juego.");
                 sWorld->SendServerMessage(SERVER_MSG_STRING, sText.c_str());
             }
         }
@@ -31,7 +31,7 @@ public:
         {
             if (player && AccountMgr::IsGMAccount(player->GetSession()->GetSecurity()))
             {
-                std::string sText = ("Игровой мастер " + std::string(player->GetSession()->GetPlayerName()) + " покидает игру.");
+                std::string sText = ("Un GM " + std::string(player->GetSession()->GetPlayerName()) + " deja el juego.");
                 sWorld->SendServerMessage(SERVER_MSG_STRING, sText.c_str());
             }
         }

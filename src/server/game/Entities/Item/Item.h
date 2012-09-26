@@ -152,17 +152,6 @@ enum SellResult
     SELL_ERR_ONLY_EMPTY_BAG                      = 6        // can only do with empty bags
 };
 
-enum FakeResult
-{
-    FAKE_ERR_CANT_FIND_OWNER,
-    FAKE_ERR_CANT_FIND_ITEM,
-    FAKE_ERR_WRONG_QUALITY,
-    FAKE_ERR_DIFF_SLOTS,
-    FAKE_ERR_DIFF_CLASS,
-    FAKE_ERR_DIFF_RACE,
-    FAKE_ERR_OK
-};
-
 // -1 from client enchantment slot number
 enum EnchantmentSlot
 {
@@ -231,9 +220,6 @@ class Item : public Object
         uint64 GetOwnerGUID()    const { return GetUInt64Value(ITEM_FIELD_OWNER); }
         void SetOwnerGUID(uint64 guid) { SetUInt64Value(ITEM_FIELD_OWNER, guid); }
         Player* GetOwner()const;
-
-        uint32 GetItemDisplayId() const { return GetUInt32Value(ITEM_FIELD_DISPLAY_ID); }
-        void SetItemDisplayId(uint32 displayId) { SetUInt32Value(ITEM_FIELD_DISPLAY_ID, displayId); }
 
         void SetBinding(bool val) { ApplyModFlag(ITEM_FIELD_FLAGS, ITEM_FLAG_SOULBOUND, val); }
         bool IsSoulBound() const { return HasFlag(ITEM_FIELD_FLAGS, ITEM_FLAG_SOULBOUND); }
@@ -352,11 +338,14 @@ class Item : public Object
         bool CheckSoulboundTradeExpire();
 
         void BuildUpdate(UpdateDataMapType&);
+		
+		// custom
+        uint32 GetFakeEntry();
+        bool DeleteFakeEntry();
+        static void DeleteFakeFromDB(uint32 lowGUID);
+        void SetFakeEntry(uint32 entry);
 
         uint32 GetScriptId() const { return GetTemplate()->ScriptId; }
-
-        FakeResult SetFakeDisplay(uint32 iEntry);
-        void RemoveFakeDisplay();
     private:
         std::string m_text;
         uint8 m_slot;

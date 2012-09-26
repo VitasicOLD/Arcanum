@@ -37,6 +37,7 @@
 #    AUCTION HOUSE BOT FILTERS PART 1
 #    AUCTION HOUSE BOT FILTERS PART 2
 #    AUCTION HOUSE BOT FILTERS PART 3
+#    TRANSMOGRIFICATION SYSTEM
 #
 ###################################################################################################
 
@@ -72,7 +73,7 @@ RealmID = 1
 #        Example:     "@prefix@/share/trinitycore"
 #        Default:     "."
 
-DataDir = "/home/server/wow/lk/data"
+DataDir = "."
 
 #
 #    LogsDir
@@ -81,7 +82,7 @@ DataDir = "/home/server/wow/lk/data"
 #                     Logs directory must exists, or log file creation will be disabled.
 #        Default:     "" - (Log files will be stored in the current path)
 
-LogsDir = "/home/server/wow/lk/logs"
+LogsDir = "."
 
 #
 #    LoginDatabaseInfo
@@ -98,9 +99,9 @@ LogsDir = "/home/server/wow/lk/logs"
 #                     "127.0.0.1;3306;trinity;trinity;world"      - (WorldDatabaseInfo)
 #                     "127.0.0.1;3306;trinity;trinity;characters" - (CharacterDatabaseInfo)
 
-LoginDatabaseInfo     = "127.0.0.1;3306;root;root;auth"
-WorldDatabaseInfo     = "127.0.0.1;3306;root;root;world"
-CharacterDatabaseInfo = "127.0.0.1;3306;root;root;characters"
+LoginDatabaseInfo     = "127.0.0.1;3306;root;serginass14;auth"
+WorldDatabaseInfo     = "127.0.0.1;3306;root;serginass14;world"
+CharacterDatabaseInfo = "127.0.0.1;3306;root;serginass14;characters"
 
 #
 #    LoginDatabase.WorkerThreads
@@ -1392,7 +1393,7 @@ BeepAtStart = 1
 #        Example:     "Welcome to John\'s Server@This server runs on Trinity Core."
 #        Default:     "Welcome to a Trinity Core server."
 
-Motd = "Welcome to freedom-wow server."
+Motd = "Welcome to TrinityCore server."
 
 #
 #    Server.LoginInfo
@@ -1407,7 +1408,7 @@ Server.LoginInfo = 0
 #        Description: Number of results being displayed using a .lookup command.
 #        Default:     0 - (Unlimited)
 
-Command.LookupMaxResults = 0
+Command.LookupMaxResults = 1
 
 #
 #    AllowTickets
@@ -1452,7 +1453,7 @@ AccountInstancesPerHour = 5
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-Warden.Enabled = 0
+Warden.Enabled = 1
 
 #
 #    Warden.NumMemChecks
@@ -2019,7 +2020,7 @@ GM.StartLevel = 1
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-GM.AllowInvite = 0
+GM.AllowInvite = 1
 
 #
 #    GM.AllowFriend
@@ -2027,7 +2028,7 @@ GM.AllowInvite = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-GM.AllowFriend = 0
+GM.AllowFriend = 1
 
 #
 #    GM.LowerSecurity
@@ -2630,7 +2631,7 @@ Arena.ArenaStartMatchmakerRating = 1500
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-Arena.Spectators.Enable = 0
+Arena.Spectators.Enable = 1
 
 #    Arena.Spectators.Only.Friend
 #        Description: If this option enabled you can ONLY spectate players,
@@ -3006,7 +3007,7 @@ Anticheat.MaxReportsForDailyReport = 70
 #              1 - Enable
 #
 
-DuelReset.Cooldown.OnStart = 1
+DuelReset.Cooldown.OnStart = 0
 
 #
 #     DuelReset.Cooldown.OnFinish
@@ -3042,7 +3043,7 @@ DuelReset.Cooldown.Max.Energy.OnStart = 0
 #              1 - Enable
 #
 
-DuelReset.Cooldown.Reset.Energy.OnStart = 1
+DuelReset.Cooldown.Reset.Energy.OnStart = 0
 
 ###################################################################################################
 
@@ -3233,11 +3234,11 @@ Boss.Kill.History.Enable = 1
 #        Description: Enables rates modifier to VIPs.
 #        Default: 1
 
-Rate.XP.Kill.Premium    = 1
-Rate.XP.Quest.Premium   = 1
-Rate.XP.Explore.Premium = 1
-Rate.Honor.Premium = 1
-Rate.Reputation.Gain.Premium = 1
+Rate.XP.Kill.Premium    = 2
+Rate.XP.Quest.Premium   = 2
+Rate.XP.Explore.Premium = 2
+Rate.Honor.Premium = 2
+Rate.Reputation.Gain.Premium = 2
 
 #
 #    VIP.Debuff.Command = 1
@@ -3560,3 +3561,92 @@ AuctionHouseBot.DisableItemsBelowReqSkillRank = 0
 AuctionHouseBot.DisableItemsAboveReqSkillRank = 0
 AuctionHouseBot.DisableTGsBelowReqSkillRank = 0
 AuctionHouseBot.DisableTGsAboveReqSkillRank = 0
+
+###################################################################################################
+#    Transmogrification config
+###################################################################################################
+#
+#    GOLD COST
+#
+#    Transmogrification.RequireGold
+#        Description: 0 No gold cost, 1 scaling gold cost, 2 custom gold cost
+#        Default:    1
+#
+#    Transmogrification.GoldModifier
+#        Description: A multiplier for the default gold cost (Transmogrification.RequireGold is 1)
+#        Default:    1.0
+#
+#    Transmogrification.GoldCost
+#        Description: Cost of transmogrification in copper for custom gold cost (Transmogrification.RequireGold is 2)
+#        Default:    100000
+
+Transmogrification.RequireGold = 1
+Transmogrification.GoldModifier = 1.0
+Transmogrification.GoldCost = 100000
+
+#
+#    TOKEN COST
+#
+#    Transmogrification.RequireToken
+#        Description: Adds/disables token cost
+#        Default:    0
+#
+#    Transmogrification.TokenEntry
+#        Description: Entry of the token item
+#        Default:    49426
+#
+#    Transmogrification.TokenAmount
+#        Description: Amount of tokens required
+#        Default:    1
+
+Transmogrification.RequireToken = 0
+Transmogrification.TokenEntry = 49426
+Transmogrification.TokenAmount = 1
+
+#
+#    QUALITIES
+#
+#    Transmogrification.AllowPoor
+#        Description: Allow poor quality items to be used as source and target items
+#        Default:    0
+#
+#    Transmogrification.AllowCommon
+#        Description: Allow common quality items to be used as source and target items
+#        Default:    0
+#
+#    Transmogrification.AllowUncommon
+#        Description: Allow uncommon quality items to be used as source and target items
+#        Default:    1
+#
+#    Transmogrification.AllowRare
+#        Description: Allow rare quality items to be used as source and target items
+#        Default:    1
+#
+#    Transmogrification.AllowEpic
+#        Description: Allow epic quality items to be used as source and target items
+#        Default:    1
+#
+#    Transmogrification.AllowLegendary
+#        Description: Allow legendary quality items to be used as source and target items
+#        Default:    0
+#
+#    Transmogrification.AllowArtifact
+#        Description: Allow artifact quality items to be used as source and target items
+#        Default:    0
+#
+#    Transmogrification.AllowHeirloom
+#        Description: Allow heirloom quality items to be used as source and target items
+#        Default:    1
+
+Transmogrification.AllowPoor = 0
+Transmogrification.AllowCommon = 0
+Transmogrification.AllowUncommon = 1
+Transmogrification.AllowRare = 1
+Transmogrification.AllowEpic = 1
+Transmogrification.AllowLegendary = 0
+Transmogrification.AllowArtifact = 0
+Transmogrification.AllowHeirloom = 1
+
+#
+###################################################################################################
+

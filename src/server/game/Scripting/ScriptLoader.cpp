@@ -25,7 +25,6 @@ void AddSC_vip_commandscript();
 void AddSC_gm_monitoring();
 void AddSC_boss_kill_history();
 void AddSC_System_Censure();
-void AddSC_transmogrify_script();
 void AddSC_npc_title();
 void AddSC_npc_arena_setup();
 void AddSC_npc_teleport();
@@ -1268,6 +1267,7 @@ void AddBattlegroundScripts()
 #ifdef SCRIPTS
 /* This is where custom scripts' loading functions should be declared. */
 
+void AddSC_NPC_Transmogrify();
 #endif
 
 void AddCustomScripts()
@@ -1280,9 +1280,9 @@ void AddCustomScripts()
     AddSC_gm_monitoring();
     AddSC_boss_kill_history();
     AddSC_System_Censure();
-    AddSC_transmogrify_script();
     AddSC_npc_title();
     AddSC_npc_arena_setup();
     AddSC_npc_teleport();
+	AddSC_NPC_Transmogrify();
 #endif
 }
