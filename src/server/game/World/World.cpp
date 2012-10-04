@@ -1263,6 +1263,9 @@ void World::LoadConfigSettings(bool reload)
     //Gm enters game
     m_bool_configs[CONFIG_GM_ENTERS_GAME] = ConfigMgr::GetBoolDefault("GM.Enters.Game", true);
 
+    // Gm chat blue
+    m_bool_configs[CONFIG_GM_BLUE_CHAT_ENABLE] = ConfigMgr::GetBoolDefault("Gm.Chat.Blue.Enable", false);
+
     //VIP commands
     m_bool_configs[CONFIG_VIP_DEBUFF_COMMAND] = ConfigMgr::GetBoolDefault("VIP.Debuff.Command", true);
     m_bool_configs[CONFIG_VIP_BANK_COMMAND] = ConfigMgr::GetBoolDefault("VIP.Bank.Command", true);
